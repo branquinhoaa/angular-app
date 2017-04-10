@@ -1,0 +1,38 @@
+.space{
+	margin: 10px 0;
+}
+.post{
+	margin: 20px 0;
+	border: solid thin #ccc;
+	border-radius: 4px;
+}
+.eachPost{
+	margin-top: 20px;
+}
+.eachComment{
+	margin: 10px 40px;
+	border: solid thin #ddd;
+	padding: 10px 20px;
+}
+.showPost {
+	margin: 20px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	padding-bottom: 30px;
+	border-radius: 7px;
+}
+.btn_space{
+	margin-right: 10px;
+}
+
+.divisor{
+	margin-top: 30px;
+}
+.score{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.comment_box{
+	margin: 10px 20px;
+}

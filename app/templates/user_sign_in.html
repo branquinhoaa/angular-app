@@ -1,0 +1,8 @@
+<form role="form" ng-submit="logaUser(user)">
+	<div class="form-group col-xs-6 col-xs-offset-3">
+		<label for="login">Entre na sua conta:</label>
+		<input type="text" class="form-control space" id="login" placeholder="Usu&aacute;rio" ng-model="user.name">
+		<button type="submit" class="btn btn-success space pull-left col-xs-4" >Entrar</button>
+		<button class="btn btn-default space pull-right col-xs-4" ui-sref="newUserRegistration">Cadastrar Novo Usu&aacute;rio</button>
+	</div>
+</form>

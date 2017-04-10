@@ -1,0 +1,45 @@
+<div class="container">
+	 <button class="btn btn-warning pull-right" ng-click="homePage()">Voltar para página principal</button>
+  <div class="page-header">
+    <h1>Posts <small> o que andam dizendo por aí...</small></h1>
+  </div>
+  <div ng-repeat="post in allPosts">
+    <div class="showPost">
+      <div>
+        <h3>{{post.post.title}}</h3>
+        <p>{{post.post.text}}</p>
+        <label>de:{{post.owner}}</label>
+      </div>
+      <hr>
+      <!-- form for rating -->
+      <div class="score">
+        <span>
+          <h4 class="divisor">Avaliar Post</h4>
+          <input-stars on-star-click="computeVote(post.user_id, post.post_id, score)" ng-model="score" max="5" ></input-stars>
+        </span>
+        <span>
+          <h4>Média de avaliação deste Post: <span class="space badge">{{post.post.rating}}</span></h4>
+        </span>
+      </div>
+      <!-- form for comment -->
+      <h4>Comentar Post</h4>
+      <form  ng-submit="AddComment(post.user_id, post.post_id,comment, $index)">
+        <input type="text" class="space form-control" ng-model="comment.name" placeholder="Nome">
+        <textarea type="text" class="space form-control" ng-model="comment.comment" placeholder="Comentário">
+        </textarea>
+        <button type="submit" class="btn btn-primary btn_space">Comentar</button>
+      </form>
+
+      <!-- show all comments from this post -->
+      <div class="container">
+        <h4 class="divisor">Comentários deste post</h4>
+        <div ng-repeat="comment in post.post.comments">
+          <div class="col-xs-10 well space">
+            <h5>{{comment.name}}</h5>
+            <p>{{comment.comment}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

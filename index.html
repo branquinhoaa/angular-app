@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blog-app">
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-input-stars-directive/angular-input-stars.css">
+</head>
+<body>
+	
+	<div class="jumbotron">
+		<h1 class="text-center">Blog</h1>
+	</div>
+	<!-- template insertion dinamically -->
+	<div ui-view></div>
+
+
+	<!-- 3º part scripts insertions  -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<!-- AngularJs -->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="bower_components/angular-input-stars-directive/angular-input-stars.js"></script>
+
+	<!-- my scripts for angular -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers/UserController.js"></script>
+	<script type="text/javascript" src="app/controllers/PostController.js"></script>
+	<script type="text/javascript" src="app/services/userFactory.js"></script>
+</body>
+</html>

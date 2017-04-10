@@ -1,0 +1,19 @@
+<form class="container" role="form" ng-submit="registerUser(user)">
+    <h3 class="text-center">Registre sua conta:</h3>
+
+	<div class="col-xs-6 col-xs-offset-3">
+	  <div class="form-group ">
+		<input type="text" class="form-control space" placeholder="Usu&aacute;rio" ng-model="user.name">
+	  </div>
+	  <div class="form-group">
+		<input type="text" class="form-control space" placeholder="E-mail" ng-model="user.email">
+	  </div>
+	  <button type="submit" class="btn btn-primary space  pull-left col-xs-4" >
+		  Registrar
+	  </button>
+
+	  <button class="btn btn-danger space pull-right col-xs-4" ui-sref="login">
+		  Voltar
+	  </button>
+	</div>
+</form>
